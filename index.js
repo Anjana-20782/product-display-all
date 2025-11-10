@@ -1,3 +1,14 @@
+
+ function updateDateTime() {
+    const now = new Date();
+    document.getElementById("time").textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    document.getElementById("date").textContent = now.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+  }
+  updateDateTime();
+  setInterval(updateDateTime, 60000);
+
+
+
 document.getElementById("search").addEventListener("click", async () => {
       let city = document.getElementById("city").value.trim();
       if (!city) return alert("Enter a city name");
@@ -80,3 +91,5 @@ document.getElementById("search").addEventListener("click", async () => {
         alert("Something went wrong. Please try again.");
       }
     });
+
+    
