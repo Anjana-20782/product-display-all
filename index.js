@@ -32,7 +32,7 @@ document.getElementById("search").addEventListener("click", async () => {
         "url('https://t3.ftcdn.net/jpg/14/63/72/50/360_F_1463725010_Omm579saIDvqCYqXN3rBRbTQ0SBR0sby.jpg')";
   
    
-      document.body.style.backgroundImage = clouds >= 80 ? cloudyBg : clearBg;
+      document.body.style.backgroundImage = clouds >= 75 ? cloudyBg : clearBg;
       document.body.style.backgroundSize = "cover";
       document.body.style.backgroundPosition = "center";
       document.body.style.transition = "background-image 2s ease-in-out";

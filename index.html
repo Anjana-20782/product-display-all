@@ -31,7 +31,7 @@
       <span>|</span>
       <div class="flex items-center gap-2">
         <span class="hidden sm:inline">Hey!</span>
-        <span class="font-semibold">Cristina</span>
+        <span class="font-semibold">Anjana</span>
         <img class="w-8 h-8 rounded-full border-2 border-sky-200" src="https://cdn-icons-png.flaticon.com/512/2922/2922561.png" alt="User">
       </div>
     </div>
@@ -44,54 +44,57 @@
   </div>
 
    <!-- Main Weather Section -->
-  <main id="display" class="flex-1 flex justify-center items-center px-12 mt-8 hidden">
+ <main id="display" class="flex flex-1 justify-between items-center px-12 mt-8 text-white backdrop-blur-md bg-white/5 rounded-3xl shadow-2xl border border-white/20 py-10">
 
-    <!-- Left side info -->
-    <section class="max-w-md">
-      <h1 class="text-6xl font-bold leading-tight" id="weatherMain">Stormy</h1>
-      <p class="text-3xl text-sky-100 mb-4" id="weatherDesc">with Heavy Rain</p>
-      <p class="text-sm text-sky-200 leading-relaxed" id="weatherDetail">
-        Variable clouds with rain showers. Winds at 10 to 20 mph.
-      </p>
+  <!-- LEFT SIDE INFO -->
+  <section class="max-w-md space-y-4">
+    <h1 class="text-7xl font-bold leading-tight drop-shadow-lg" id="weatherMain">Stormy</h1>
+    <p class="text-3xl text-sky-100 mb-2" id="weatherDesc">with Heavy Rain</p>
+    <p class="text-sm text-sky-200 leading-relaxed" id="weatherDetail">
+      Variable clouds with rain showers. Winds at 10 to 20 mph.
+    </p>
 
-      <div class="mt-8 flex gap-10 text-center text-sm">
-        <div>
-          <p id="city1" class="text-3xl font-semibold">12°</p>
-          <p class="text-sky-200">Washington D.C</p>
-        </div>
-        <div>
-          <p id="city2" class="text-3xl font-semibold">17°</p>
-          <p class="text-sky-200">Oklahoma City</p>
-        </div>
-        <div>
-          <p id="city3" class="text-3xl font-semibold">14°</p>
-          <p class="text-sky-200">Philadelphia</p>
-        </div>
+    <!-- City Temperatures -->
+    <div class="mt-10 flex gap-12 text-center text-sm">
+      <div>
+        <p id="city1" class="text-4xl font-semibold">12°</p>
+        <p class="text-sky-200">Washington D.C</p>
       </div>
-    </section>
-
-    <!-- Center Cloud -->
-    <section class="relative flex flex-col items-center">
-      <img id="icon" src="./assests/cloud.png" alt="Weather icon" class="w-72 drop-shadow-lg">
-      <div class="absolute bottom-0 h-10 w-56 bg-gradient-to-t from-white/20 to-transparent rounded-full blur-md"></div>
-    </section>
-
-    <!-- Right Details -->
-    <section class="flex flex-col items-end text-right space-y-3">
-      <h2 id="temperature" class="text-7xl font-bold">27°</h2>
-      <p class="text-sm">WIND: <span id="wind">6 MPH</span></p>
-      <p class="text-sm">UV INDEX: <span id="uv">0 OF 10</span></p>
-      <p class="text-sm">CITY: <span id="cityName">New York City</span></p>
-
-      <div class="mt-6 space-y-3 text-sm">
-        <p>Pennsylvania: <span id="pa">18°C</span></p>
-        <p>Massachusetts: <span id="ma">24°C</span></p>
-        <p>New York: <span id="ny">27°C</span></p>
-        <p>North Carolina: <span id="nc">-2°C</span></p>
+      <div>
+        <p id="city2" class="text-4xl font-semibold">17°</p>
+        <p class="text-sky-200">Oklahoma City</p>
       </div>
-    </section>
+      <div>
+        <p id="city3" class="text-4xl font-semibold">14°</p>
+        <p class="text-sky-200">Philadelphia</p>
+      </div>
+    </div>
+  </section>
 
-  </main>
+  <!-- CENTER CLOUD IMAGE -->
+  <section class="relative flex flex-col items-center">
+    <img id="icon" src="./assests/cloud.png" alt="Weather icon"
+      class="w-80 drop-shadow-2xl animate-pulse opacity-95">
+    <div class="absolute bottom-0 h-16 w-64 bg-gradient-to-t from-white/20 to-transparent rounded-full blur-xl"></div>
+  </section>
+
+  <!-- RIGHT SIDE DETAILS -->
+  <section class="flex flex-col items-end text-right space-y-3">
+    <h2 id="temperature" class="text-8xl font-bold drop-shadow-lg">27°</h2>
+    <p class="text-sm tracking-wide">WIND: <span id="wind">6 MPH</span></p>
+    <p class="text-sm tracking-wide">UV INDEX: <span id="uv">0 OF 10</span></p>
+    <p class="text-sm tracking-wide">CITY: <span id="cityName">New York City</span></p>
+
+    <div class="mt-8 space-y-3 text-sm backdrop-blur-sm bg-white/10 p-4 rounded-2xl border border-white/20 shadow-lg">
+      <p>Pennsylvania: <span id="pa">18°C</span></p>
+      <p>Massachusetts: <span id="ma">24°C</span></p>
+      <p>New York: <span id="ny">27°C</span></p>
+      <p>North Carolina: <span id="nc">-2°C</span></p>
+    </div>
+  </section>
+
+</main>
+
 
     <script src="./index.js"></script>
 </body>
